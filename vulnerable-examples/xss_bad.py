@@ -1,6 +1,6 @@
-def render_comment(comment):
-    # This function is vulnerable to XSS attacks because it directly renders user input without sanitization.
-    return f"<div class='comment'>{comment}</div>"
+def render_comment(comment: str) -> str:
+    # This function takes a comment string as input and returns an HTML div element containing the comment.
+    return f"<div>{comment}</div>"
 
 if __name__ == "__main__":
     payload = "<script>alert(1)</script>"
