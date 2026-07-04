@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request # pyright: ignore[reportMissingImports]
 import html
 
 app = Flask(__name__)
